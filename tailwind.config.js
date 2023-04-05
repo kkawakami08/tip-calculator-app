@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         primaryCyan: "hsl(var(--primary-cyan))",
+
         darkCyan: "hsl(var(--dark-cyan))",
         darkGrayishCyan: "hsl(var(--dark-grayish-cyan))",
         grayishCyan: "hsl(var(--grayish-cyan))",

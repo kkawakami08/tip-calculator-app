@@ -9,3 +9,14 @@
   padding: 0;
   margin: 0;
 }
+
+@layer base {
+  :root {
+    --primary-cyan: 172deg 67% 45%;
+    --dark-cyan: 183deg 100% 15%;
+    --dark-grayish-cyan: 186deg 14% 43%;
+    --grayish-cyan: 184deg 14% 56%;
+    --light-grayish-cyan: 185deg 41% 84%;
+    --very-light-grayish-cyan: 189deg 41% 97%;
+  }
+}

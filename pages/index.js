@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import logo from "../public/images/logo.svg";
 import Bill from "@/components/Bill";
+import TipPercentage from "@/components/TipPercentage";
 
 export default function Home() {
   return (
@@ -20,9 +21,7 @@ export default function Home() {
         </div>
         <div className="bg-white w-full h-full rounded-t-3xl px-7 py-7">
           <Bill />
-          <div>
-            <h1>Tip</h1>
-          </div>
+          <TipPercentage />
           <div>
             <h1>Number of People</h1>
           </div>

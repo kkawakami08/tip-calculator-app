@@ -12,8 +12,8 @@ export default function Home() {
       <Head>
         <title>Tip Calculator App</title>
       </Head>
-      <main className="h-screen flex flex-col items-center bg-lightGrayishCyan">
-        <div className="w-1/3 py-12 flex items-center justify-center">
+      <main className="h-screen flex flex-col items-center bg-lightGrayishCyan py-12">
+        <div className="w-1/3 pb-12 flex items-center justify-center md:w-20">
           <Image
             src={logo}
             alt="Tip calculator logo"
@@ -21,10 +21,12 @@ export default function Home() {
             height={500}
           />
         </div>
-        <div className="bg-white w-full h-full rounded-t-3xl px-7 py-7 flex flex-col gap-7">
-          <Bill />
-          <TipPercentage />
-          <People />
+        <div className="bg-white w-full  rounded-3xl px-7 py-7 flex flex-col gap-7 md:w-[50rem] md:flex-row md:items-center">
+          <div className="flex flex-col gap-7 md:w-1/2 md:h-full">
+            <Bill />
+            <TipPercentage />
+            <People />
+          </div>
           <Total />
         </div>
       </main>

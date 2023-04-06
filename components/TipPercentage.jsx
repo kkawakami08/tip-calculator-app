@@ -4,7 +4,7 @@ export default function TipPercentage() {
   return (
     <div className="">
       <p className="text-darkGrayishCyan pb-2">Select Tip %</p>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
         <div className="bg-darkCyan rounded-md flex items-center justify-center py-2">
           <p className="text-veryLightGrayishCyan">5%</p>
         </div>

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import logo from "../public/images/logo.svg";
+import Bill from "@/components/Bill";
 
 export default function Home() {
   return (
@@ -17,10 +18,8 @@ export default function Home() {
             height={500}
           />
         </div>
-        <div className="bg-white w-full h-full rounded-t-3xl">
-          <div>
-            <h1>Bill</h1>
-          </div>
+        <div className="bg-white w-full h-full rounded-t-3xl px-7 py-7">
+          <Bill />
           <div>
             <h1>Tip</h1>
           </div>

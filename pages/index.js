@@ -21,7 +21,7 @@ export default function Home() {
             height={500}
           />
         </div>
-        <div className="bg-white w-full h-full rounded-t-3xl px-7 py-7">
+        <div className="bg-white w-full h-full rounded-t-3xl px-7 py-7 flex flex-col gap-7">
           <Bill />
           <TipPercentage />
           <People />

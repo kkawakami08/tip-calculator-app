@@ -12,8 +12,8 @@ export default function Home() {
       <Head>
         <title>Tip Calculator App</title>
       </Head>
-      <main className="h-screen flex flex-col items-center bg-lightGrayishCyan py-12">
-        <div className="w-1/3 pb-12 flex items-center justify-center md:w-20">
+      <main className="h-screen flex flex-col items-center bg-lightGrayishCyan md:justify-center py-14 ">
+        <div className="w-1/3 pb-14 flex items-center justify-center md:w-20">
           <Image
             src={logo}
             alt="Tip calculator logo"

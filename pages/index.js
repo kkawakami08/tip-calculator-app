@@ -36,18 +36,22 @@ export default function Home() {
   };
 
   const calculateTip = () => {
-    const totalTip =
-      (Number(tipData.billAmount) * Number(tipData.tipPercentage)) / 100;
-    const totalTipPerPerson = totalTip / Number(tipData.people);
-    const totalBill =
-      (Number(tipData.billAmount) + totalTip) / Number(tipData.people);
-    setTipData((prevTipData) => {
-      return {
-        ...prevTipData,
-        tipAmount: totalTipPerPerson,
-        totalAmount: totalBill,
-      };
-    });
+    if (Number(tipData.billAmount) < 0) {
+      alert("Bill amount can't be negative");
+    } else {
+      const totalTip =
+        (Number(tipData.billAmount) * Number(tipData.tipPercentage)) / 100;
+      const totalTipPerPerson = totalTip / Number(tipData.people);
+      const totalBill =
+        (Number(tipData.billAmount) + totalTip) / Number(tipData.people);
+      setTipData((prevTipData) => {
+        return {
+          ...prevTipData,
+          tipAmount: totalTipPerPerson,
+          totalAmount: totalBill,
+        };
+      });
+    }
     console.log(tipData.tipPercentage);
   };
 

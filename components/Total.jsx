@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ({ tipAmount, totalAmount, handleClick }) {
+export default function Total({ tipAmount, totalAmount, handleClick }) {
   return (
     <div className="bg-darkCyan rounded-lg py-5 px-5 flex flex-col items-center gap-5 md:w-1/2 md:h-full justify-between md:py-8">
       <div className="w-full flex flex-col gap-12">

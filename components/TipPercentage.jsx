@@ -6,7 +6,10 @@ export default function TipPercentage({
   handleClick,
 }) {
   const tipBoxStyle =
-    "bg-darkCyan rounded-md flex items-center justify-center py-2 hover:bg-primaryCyan group hover:cursor-pointer";
+    "bg-darkCyan rounded-md flex items-center justify-center py-2 hover:bg-primaryCyan group hover:cursor-pointer ";
+
+  const buttonStyle =
+    "bg-darkCyan rounded-md text-veryLightGrayishCyan py-2 hover:bg-primaryCyan hover:text-darkCyan";
 
   const percentStyle = "text-veryLightGrayishCyan group-hover:text-darkCyan";
 
@@ -14,21 +17,21 @@ export default function TipPercentage({
     <div className="">
       <p className="text-darkGrayishCyan pb-2">Select Tip %</p>
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-        <div id="5" className={tipBoxStyle} onClick={handleClick}>
-          <p className={percentStyle}>5%</p>
-        </div>
-        <div id="10" className={tipBoxStyle} onClick={handleClick}>
-          <p className={percentStyle}>10%</p>
-        </div>
-        <div id="15" className={tipBoxStyle} onClick={handleClick}>
-          <p className={percentStyle}>15%</p>
-        </div>
-        <div id="25" className={tipBoxStyle} onClick={handleClick}>
-          <p className={percentStyle}>25%</p>
-        </div>
-        <div id="50" className={tipBoxStyle} onClick={handleClick}>
-          <p className={percentStyle}>50%</p>
-        </div>
+        <button id="5" className={buttonStyle} onClick={handleClick}>
+          5%
+        </button>
+        <button id="10" className={buttonStyle} onClick={handleClick}>
+          10%
+        </button>
+        <button id="15" className={buttonStyle} onClick={handleClick}>
+          15%
+        </button>
+        <button id="25" className={buttonStyle} onClick={handleClick}>
+          25%
+        </button>
+        <button id="50" className={buttonStyle} onClick={handleClick}>
+          50%
+        </button>
         <input
           type="number"
           placeholder="Custom"

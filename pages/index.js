@@ -11,7 +11,7 @@ export default function Home() {
   const [tipData, setTipData] = useState({
     billAmount: "",
     tipPercentage: "",
-    people: "",
+    people: 1,
     tipAmount: 0,
     totalAmount: 0,
   });
@@ -34,7 +34,23 @@ export default function Home() {
       };
     });
   };
-  console.log(tipData.people);
+
+  const calculateTip = () => {
+    const totalTip =
+      (Number(tipData.billAmount) * Number(tipData.tipPercentage)) / 100;
+    const totalTipPerPerson = totalTip / Number(tipData.people);
+    const totalBill =
+      (Number(tipData.billAmount) + totalTip) / Number(tipData.people);
+    setTipData((prevTipData) => {
+      return {
+        ...prevTipData,
+        tipAmount: totalTipPerPerson,
+        totalAmount: totalBill,
+      };
+    });
+    console.log(tipData.tipPercentage);
+  };
+
   return (
     <>
       <Head>
@@ -59,7 +75,11 @@ export default function Home() {
             />
             <People people={tipData.people} handleChange={handleChange} />
           </div>
-          <Total />
+          <Total
+            tipAmount={tipData.tipAmount}
+            totalAmount={tipData.totalAmount}
+            handleClick={calculateTip}
+          />
         </div>
       </main>
     </>

@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function Home() {
   const [tipData, setTipData] = useState({
     billAmount: "",
-    tipPercentage: 15,
+    tipPercentage: "",
     people: 1,
     tipAmount: 0,
     totalAmount: 0,
@@ -25,7 +25,16 @@ export default function Home() {
       };
     });
   }
-  console.log(tipData.billAmount);
+
+  const handleClick = (event) => {
+    setTipData((prevTipData) => {
+      return {
+        ...prevTipData,
+        tipPercentage: event.target.id,
+      };
+    });
+  };
+  console.log(tipData.tipPercentage);
   return (
     <>
       <Head>
@@ -43,7 +52,11 @@ export default function Home() {
         <div className="bg-white w-full  rounded-3xl px-7 py-7 flex flex-col gap-7 md:w-[50rem] md:flex-row md:items-center">
           <div className="flex flex-col gap-7 md:w-1/2 md:h-full">
             <Bill billAmount={tipData.billAmount} handleChange={handleChange} />
-            <TipPercentage />
+            <TipPercentage
+              tipPercentage={tipData.tipPercentage}
+              handleChange={handleChange}
+              handleClick={handleClick}
+            />
             <People />
           </div>
           <Total />

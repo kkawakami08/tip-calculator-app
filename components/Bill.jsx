@@ -13,7 +13,7 @@ export default function Bill({ billAmount, handleChange }) {
         <input
           type="number"
           placeholder="0.00"
-          className="bg-veryLightGrayishCyan py-2 px-4 rounded-lg w-full text-right focus:outline-none focus:ring focus:ring-primaryCyan focus:border-primaryCyan "
+          className="bg-veryLightGrayishCyan py-2 px-4 rounded-lg w-full text-right focus:outline-none focus:ring focus:ring-primaryCyan focus:border-primaryCyan hover:cursor-pointer"
           onChange={handleChange}
           name="billAmount"
           value={billAmount}

@@ -20,3 +20,7 @@
     --very-light-grayish-cyan: 189deg 41% 97%;
   }
 }
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

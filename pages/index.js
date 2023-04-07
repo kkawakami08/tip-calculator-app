@@ -11,7 +11,7 @@ export default function Home() {
   const [tipData, setTipData] = useState({
     billAmount: "",
     tipPercentage: "",
-    people: 1,
+    people: "",
     tipAmount: 0,
     totalAmount: 0,
   });
@@ -34,7 +34,7 @@ export default function Home() {
       };
     });
   };
-  console.log(tipData.tipPercentage);
+  console.log(tipData.people);
   return (
     <>
       <Head>
@@ -57,7 +57,7 @@ export default function Home() {
               handleChange={handleChange}
               handleClick={handleClick}
             />
-            <People />
+            <People people={tipData.people} handleChange={handleChange} />
           </div>
           <Total />
         </div>
